@@ -1,0 +1,8 @@
+Nacos:
+  Ip: 10.2.171.13
+  Port: 8848
+Wzy:
+  DataId: wzy
+  Group: DEFAULT_GROUP
+Grpc:
+  Port: 8081

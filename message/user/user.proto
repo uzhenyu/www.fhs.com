@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package user;
+option go_package="./user";
+
+service User {
+  rpc Add(AddRequest) returns(AddResponse);
+  rpc Search(SearchRequest) returns(SearchResponse);
+  rpc UpdateNum(UpdateNumRequest) returns(UpdateNumResponse);
+}
+
+message ShopInfo {
+  int64 ID = 10;
+  string Name = 20;
+  float Price = 30;
+  int64 Num = 40;
+}
+
+message AddRequest {
+  ShopInfo info = 10;
+}
+
+message AddResponse {
+  ShopInfo info = 10;
+}
+
+message SearchRequest {
+  string Name = 10;
+}
+
+message SearchResponse {
+  bytes info = 10;
+}
+
+message UpdateNumRequest {
+  int64 ID = 10;
+  int64 Num = 20;
+}
+
+message UpdateNumResponse {
+
+}
